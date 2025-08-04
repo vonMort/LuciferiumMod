@@ -1,0 +1,16 @@
+<ModMetaData>
+    <name>Mort's Luciferium</name>
+    <author>vonMort</author>
+    <packageId>mort.luciferium</packageId>
+    <supportedVersions>
+        <li>1.6</li>
+    </supportedVersions>
+    <description>
+        This mod introduces new experimental variations of Luciferium, adding a sense of progression and crafting options:
+        
+        - **Unstable Luciferium**: An early, unstable version of Luciferium offering basic mechanite enhancements. However, it is unpredictable and less effective compared to its refined counterparts.
+        - **Refined Luciferium**: A more advanced and stable version with improved effects, though it still falls short of the perfection of pure Luciferium.
+        
+        These new additions enhance the risk-reward dynamic of using and producing mechanites, making the mod perfect for players eager to experiment with the dangers and rewards of Luciferium!
+    </description>
+</ModMetaData>

@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- THINGDEF Unstable -->
+    <ThingDef ParentName="DrugPillBase">
+        <defName>Mort_UnstableLuciferium</defName>
+        <label>unstable luciferium</label>
+        <description>Unstable luciferium is an early experimental attempt to synthesize the powerful effects of pure luciferium. Infused with unstable, low-grade mechanites, it provides minor physical improvements but causes notable mental instability. Dependency is absolute, and its long-term reliability is questionable at best.</description>
+        <descriptionHyperlinks>
+            <HediffDef>Mort_LuciLow</HediffDef>
+            <HediffDef>LuciferiumAddiction</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Things/Item/Drug/Luciferium</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <MarketValue>30</MarketValue>
+            <Mass>0.01</Mass>
+        </statBases>
+        <techLevel>Ultra</techLevel>
+        <minRewardCount>10</minRewardCount>
+        <ingestible>
+            <drugCategory>Medical</drugCategory>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>Mort_LuciLow</hediffDef>
+                    <severity>1.0</severity>
+                    <doToGeneratedPawnIfAddicted>true</doToGeneratedPawnIfAddicted>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <comps>
+            <li Class="CompProperties_Drug">
+                <chemical>Luciferium</chemical>
+                <addictiveness>1.00</addictiveness>
+                <needLevelOffset>0.9</needLevelOffset>
+                <listOrder>1011</listOrder>
+            </li>
+        </comps>
+        <tradeTags>
+            <li>ExoticMisc</li>
+        </tradeTags>
+        <thingSetMakerTags>
+            <li>RewardStandardCore</li>
+        </thingSetMakerTags>
+        <allowedArchonexusCount>50</allowedArchonexusCount>
+    </ThingDef>
+
+    <!-- HEDIFFDEF Unstable -->
+    <HediffDef>
+        <defName>Mort_LuciLow</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <label>Unstable Mechanite High</label>
+        <labelNoun>an unstable luciferium high</labelNoun>
+        <description>Unstable, low-grade mechanites course through the bloodstream, providing minor physical enhancements. However, their unstable nature leads to neurological imbalance and prevents healing of scars or permanent injuries. These mechanites break down over time, leaving the user's body vulnerable.</description>
+        <defaultLabelColor>(0.9,0.3,0.3)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.05</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <painFactor>0.95</painFactor>
+                <capMods>
+                    <li><capacity>Consciousness</capacity><offset>0.03</offset></li>
+                    <li><capacity>Moving</capacity><offset>0.01</offset></li>
+                    <li><capacity>Sight</capacity><offset>0.05</offset></li>
+                    <li><capacity>BloodFiltration</capacity><offset>0.20</offset></li>
+                    <li><capacity>BloodPumping</capacity><offset>0.05</offset></li>
+                    <li><capacity>Metabolism</capacity><offset>0.10</offset></li>
+                    <li><capacity>Breathing</capacity><offset>0.03</offset></li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- THOUGHTDEF Unstable -->
+    <ThoughtDef>
+        <defName>Mort_LuciLow</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>Mort_LuciLow</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>Effects of unstable luciferium</label>
+                <description>The low-grade mechanites in my body feel wrong. While they provide mild enhancements, their instability leaves me feeling out of sync and mentally strained.</description>
+                <baseMoodEffect>-10</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <!-- THINGDEF Refined -->
+    <ThingDef ParentName="DrugPillBase">
+        <defName>Mort_RefinedLuciferium</defName>
+        <label>refined luciferium</label>
+        <description>Refined luciferium represents a significant improvement over the unstable version. Utilizing more advanced techniques and higher-quality ingredients, it provides consistent physical and cognitive enhancements with reduced mental strain. However, it still cannot fully achieve the regenerative powers of pure luciferium.</description>
+        <descriptionHyperlinks>
+            <HediffDef>Mort_LuciMid</HediffDef>
+            <HediffDef>LuciferiumAddiction</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Things/Item/Drug/Luciferium</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <MarketValue>30</MarketValue>
+            <Mass>0.01</Mass>
+        </statBases>
+        <techLevel>Ultra</techLevel>
+        <minRewardCount>10</minRewardCount>
+        <ingestible>
+            <drugCategory>Medical</drugCategory>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>Mort_LuciMid</hediffDef>
+                    <severity>1.0</severity>
+                    <doToGeneratedPawnIfAddicted>true</doToGeneratedPawnIfAddicted>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <comps>
+            <li Class="CompProperties_Drug">
+                <chemical>Luciferium</chemical>
+                <addictiveness>1.00</addictiveness>
+                <needLevelOffset>0.9</needLevelOffset>
+                <listOrder>1011</listOrder>
+            </li>
+        </comps>
+        <tradeTags>
+            <li>ExoticMisc</li>
+        </tradeTags>
+        <thingSetMakerTags>
+            <li>RewardStandardCore</li>
+        </thingSetMakerTags>
+        <allowedArchonexusCount>50</allowedArchonexusCount>
+    </ThingDef>
+
+    <!-- HEDIFFDEF Refined -->
+    <HediffDef>
+        <defName>Mort_LuciMid</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <label>Refined Mechanite High</label>
+        <labelNoun>a refined luciferium high</labelNoun>
+        <description>Refined mechanites circulate through the bloodstream, enhancing physical and cognitive performance with greater stability than unstable luciferium. While more reliable, these mechanites still lack pure luciferium's full regenerative potential and retain their detrimental dependency.</description>
+        <defaultLabelColor>(0.9,0.3,0.3)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.05</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <painFactor>0.90</painFactor>
+                <capMods>
+                    <li><capacity>Consciousness</capacity><offset>0.04</offset></li>
+                    <li><capacity>Moving</capacity><offset>0.02</offset></li>
+                    <li><capacity>Sight</capacity><offset>0.10</offset></li>
+                    <li><capacity>BloodFiltration</capacity><offset>0.45</offset></li>
+                    <li><capacity>BloodPumping</capacity><offset>0.1</offset></li>
+                    <li><capacity>Metabolism</capacity><offset>0.15</offset></li>
+                    <li><capacity>Breathing</capacity><offset>0.06</offset></li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- THOUGHTDEF Refined -->
+    <ThoughtDef>
+        <defName>Mort_LuciMid</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>Mort_LuciMid</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>Effects of refined luciferium</label>
+                <description>The refined mechanites in my system feel much more controlled than their unstable counterparts. Improvements to my abilities are smoother, but I can still sense dependency lingering in the background.</description>
+                <baseMoodEffect>-5</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+    
+</Defs>

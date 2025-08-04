@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+    <RecipeDef>
+        <defName>Mort_MakeUnstableLuciferium</defName>
+        <recipeUsers>
+            <li>DrugLab</li>
+        </recipeUsers>
+        <label>Produce unstable luciferium</label>
+        <description>Create an unstable experimental version of luciferium. This drug infuses low-grade mechanites into the bloodstream, granting minor physical enhancements at the cost of mental stability. While easier to produce, it is highly unreliable compared to refined or pure luciferium.</description>
+        <jobString>Making unstable luciferium</jobString>
+        <workAmount>1000</workAmount>
+        <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_Brewing</soundWorking>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Neutroamine</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SubcoreBasic</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Bioferrite</li>
+                    </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+        </ingredients>
+        <products>
+                <Mort_UnstableLuciferium>5</Mort_UnstableLuciferium>
+        </products>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Neutroamine</li>
+                <li>SubcoreBasic</li>
+                <li>Bioferrite</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <skillRequirements>
+            <Medicine>6</Medicine>
+            <Crafting>6</Crafting>
+        </skillRequirements>
+        <workSkill>Crafting</workSkill>
+        <workSkillLearnFactor>0.5</workSkillLearnFactor>
+    </RecipeDef>
+    
+    <RecipeDef>
+        <defName>Mort_MakeRefinedLuciferium</defName>
+        <recipeUsers>
+            <li>DrugLab</li>
+        </recipeUsers>
+        <label>Produce refined luciferium</label>
+        <description>This recipe produces a semi-stable version of luciferium by refining the unstable variant. Refined luciferium offers smoother and more consistent effects on the user's body while mitigating the flaws of its unstable predecessor. However, it still falls short of the capabilities of pure luciferium.</description>
+        <jobString>Making refined luciferium</jobString>
+        <workAmount>1750</workAmount>
+        <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_Brewing</soundWorking>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Neutroamine</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SubcoreRegular</li> <!-- SubcoreRegular SubcoreHigh -->
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Bioferrite</li>
+                    </thingDefs>
+                </filter>
+                <count>75</count>
+            </li>
+        </ingredients>
+        <products>
+            <Mort_RefinedLuciferium>7</Mort_RefinedLuciferium>
+        </products>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Neutroamine</li>
+                <li>SubcoreRegular</li>
+                <li>Bioferrite</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <skillRequirements>
+            <Medicine>8</Medicine>
+            <Crafting>12</Crafting>
+        </skillRequirements>
+        <workSkill>Crafting</workSkill>
+        <workSkillLearnFactor>0.5</workSkillLearnFactor>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>Mort_MakeLuciferium</defName>
+        <recipeUsers>
+            <li>DrugLab</li>
+        </recipeUsers>
+        <label>Produce luciferium</label>
+        <description>Create pure luciferium, the pinnacle of mechanite drug synthesis. This highly advanced substance fully enhances the body and provides regenerative abilities, but it requires vast resources and skilled craftsmanship to produce. The "Devil's Bargain" holds true as the user's dependency is absolute and irreversible.</description>
+        <jobString>Making luciferium</jobString>
+        <workAmount>2500</workAmount>
+        <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_Brewing</soundWorking>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Neutroamine</li>
+                    </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SubcoreHigh</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Bioferrite</li>
+                    </thingDefs>
+                </filter>
+                <count>150</count>
+            </li>
+        </ingredients>
+        <products>
+            <Luciferium>10</Luciferium>
+        </products>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Neutroamine</li>
+                <li>SubcoreRegular</li>
+                <li>Bioferrite</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <skillRequirements>
+            <Medicine>10</Medicine>
+            <Crafting>18</Crafting>
+        </skillRequirements>
+        <workSkill>Crafting</workSkill>
+        <workSkillLearnFactor>0.5</workSkillLearnFactor>
+    </RecipeDef>
+</Defs>
